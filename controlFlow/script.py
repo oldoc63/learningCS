@@ -1,3 +1,4 @@
+
 #This collegue requires 120 credits to graduate
 def greater_than(x, y):
   if x > y:
@@ -12,3 +13,4 @@ def graduation_reqs(credits):
     return "You have enough credits to graduate!"
   
 print(graduation_reqs(120))
+
