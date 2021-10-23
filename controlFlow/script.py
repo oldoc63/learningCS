@@ -1,13 +1,15 @@
-#(2 - 1 > 3) or (-5 * 2 == -10)
-statement_one = True
+statement_one = False
 
-#(9 + 5 <= 15) or (7 != 4 + 3)
 statement_two = True
 
-#Write an if statement that checks if a student either has 120 or more credits or a GPA 2.0 or higher, and if so prints:
+def graduation_reqs(gpa, credits):
+  if (gpa >= 2.0) and (credits >= 120):
+    return "You meet the requirements to graduate!"
+  if (gpa >= 2.0) and not(credits >= 120):
+    return "You do not have enough credits to graduate."
+  if not (gpa >= 2.0) and(credits >= 120):
+    return "Your GPA is not high enough to graduate."
+  if not(gpa >= 2.0) and not (credits >= 120):
+    return "You do not meet either requirement to graduate!"
 
-def graduation_mailer(credits, gpa):
-  if credits >= 120 or gpa >= 2:
-    return "You have met at least one of the requirements."
-
-print(graduation_mailer(110,2))
+print(graduation_reqs(1.8, 110))
