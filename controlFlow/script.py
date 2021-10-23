@@ -1,16 +1,10 @@
-#Boolean or not
+#Determine if the following boolean expressions are True or False.
 
-#My dog is the cutest dog in the world
-example_statement = "No"
+statement_one = True
+print((5 * 2) - 1 == 8 + 1)
 
-#Dogs are mammals
-statement_one = "Yes"
+statement_two = False
+print(13 - 6 != (3 * 2) + 1)
 
-#My dog is named Pavel
-statement_two = "Yes"
-
-#Dogs make the best pets
-statement_three = "No"
-
-#Cats are female dogs
-statement_four = "Yes"
+statement_three = True
+print(3 * (2 - 1) == 4 - 1)
