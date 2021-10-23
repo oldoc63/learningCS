@@ -1,10 +1,13 @@
-#Determine if the following boolean expressions are True or False.
+#Check the type
 
-statement_one = True
-print((5 * 2) - 1 == 8 + 1)
+my_baby_bool = "true"
 
-statement_two = False
-print(13 - 6 != (3 * 2) + 1)
+print(type(my_baby_bool))
 
-statement_three = True
-print(3 * (2 - 1) == 4 - 1)
+my_baby_bool_two = True
+
+print(type(my_baby_bool_two))
+
+
+
+
