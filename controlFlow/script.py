@@ -1,13 +1,15 @@
-def graduation_reqs(gpa, credits):
-  if (gpa >= 2.0) and (credits >= 120):
-    return "You meet the requirements to graduate!"
-  if (gpa >= 2.0) and not (credits >= 120):
-    return "You do not have enough credits to graduate."
-  if not (gpa >= 2.0) and (credits >= 120):
-    return "Your GPA is not high enough to graduate."
+
+def grade_converter(gpa):
+  if gpa >= 4.0:
+    return "A"
+  elif gpa >= 3.0:
+    return "B"
+  elif gpa >= 2.0:
+    return "C"
+  elif gpa >= 1.0:
+    return "D"
+  elif gpa >= 0.0:
+    return "F" 
   else:
-    return "You do not meet the GPA or the credit requirement for graduation."
-
-print(graduation_reqs(0, 120))
-
+    return grade 
 
