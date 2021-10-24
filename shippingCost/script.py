@@ -13,3 +13,5 @@ def shipping_cost_ground(weight):
 
 print(shipping_cost_ground(8.4))
 
+shipping_cost_premiun = 125.00
+
