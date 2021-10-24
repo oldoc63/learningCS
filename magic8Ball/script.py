@@ -2,9 +2,9 @@
 
 import random
 
-name = "Leopoldo"
+name = 'Leopoldo'
 
-question = "Will I win the lottery?"
+question = 'Wil I win the lottery?'
 
 answer = ''
 
@@ -32,5 +32,31 @@ elif random_number == 9:
   answer = "Very doubtful."
 else:
   answer = "Error"
+
+if name == "":
+  print("Question: " + question)
+else:
+  print(name + " asks: " + question)
+
+if len(question) == 0:
+  print("The Magic 8-Ball cannot provide a fortune unless you ask it something.")
+else:
+  print("Magic 8-Ball's answer: " + answer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
