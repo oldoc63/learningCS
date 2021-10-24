@@ -30,3 +30,30 @@ def shipping_cost_drone(weight):
 
 print(shipping_cost_drone(1.5))
 
+def print_cheapest_shipping_method(weight):
+  
+  ground = shipping_cost_ground(weight)
+  premiun = shipping_cost_premiun
+  drone = shipping_cost_drone(weight)
+  
+  if ground < premiun and ground < drone:
+    method = "standard ground"
+    cost = ground
+  elif premiun < ground and premiun < drone:
+    method = "premiun ground"
+    cost = premiun
+  else:
+    method = "drone"
+    cost = drone  
+
+  print(
+    "The cheapest option available is $%.2f with %s shipping" % (cost, method)
+  )
+  
+print_cheapest_shipping_method(4.8)
+print_cheapest_shipping_method(41.5)
+
+
+
+
+
