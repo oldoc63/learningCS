@@ -1,23 +1,20 @@
-# Who Wants To Be A Millionaire 💰 
+# Area Calculator 📏
 
-score = 0
+import math
 
-option1 = 'Fresca'
-option2 = 'V8'
-option3 = 'Coke'
-option4 = 'A&W'
-  
-print("For ordering his favorite beverages on demand, LBJ had four buttons installed in the Oval Office labeled 'Coffee', 'Tea', 'Coke', and what?\n")
+base = 20
+height = 30
+area = base * height / 2
 
-print("A.", option1)
-print("B.", option2)
-print("C.", option3)
-print("D.", option4)
-  
-answer = 'a'
+print("The triangle area is", area)
 
-if answer == 'A' or answer == 'a': 
-  score += 100
-  print("\nCorrect!")
-else:
-  print("\nNope, sorry!")
+length = 2
+width = 12
+area = length * width
+
+print("The rectangle area is", area )
+    
+radius = 36
+area = math.pi * radius * radius
+    
+print("The circle area is", area)
