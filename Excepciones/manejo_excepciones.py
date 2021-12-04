@@ -4,7 +4,7 @@ b = 0
 
 try:
     resultado = a/b
-except ZeroDivisionError as e:
+except Exception as e:
     print(f'Ocurrió un error: {e}')
 
 print(f'Resultado: {resultado}')
