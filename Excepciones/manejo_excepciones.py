@@ -12,5 +12,7 @@ except Exception as e:
     print(f'Exception - Ocurrió un error: {e}, {type(e)}')
 else:
     print('No se arrojó ninguna excepción')
+finally:
+    print('Ejecución del bloque finally')
 print(f'Resultado: {resultado}')
 print('Continuamos ...')
