@@ -4,8 +4,10 @@ b = 0
 
 try:
     resultado = a/b
-except Exception as e:
+except ZeroDivisionError as e:
+    print(f'Ocurrió un error: {e}')
+except TypeError as e:
     print(f'Ocurrió un error: {e}')
 
-print(f'Resultado: {resultado}')
+print(f'Resultado : {resultado}')
 print('Continuamos ... ')
