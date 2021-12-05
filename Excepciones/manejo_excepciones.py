@@ -8,6 +8,8 @@ except ZeroDivisionError as e:
     print(f'Ocurrió un error: {e}')
 except TypeError as e:
     print(f'Ocurrió un error: {e}')
+except Exception as e:
+    print(f'Ocurrió un error: {e}')
 
-print(f'Resultado : {resultado}')
-print('Continuamos ... ')
+print(f'Resultado: {resultado}')
+print('Continuamos ...')
