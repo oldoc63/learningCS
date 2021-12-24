@@ -1,5 +1,4 @@
 try:
-
     archivo = open('prueba.txt','w', enconding='utf8')
     archivo.write('Agregamos información al archivo\n')
     archivo.write('Adios')
