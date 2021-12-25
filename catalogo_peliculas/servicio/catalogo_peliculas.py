@@ -1,3 +1,5 @@
+import os
+
 class CatalogoPeliculas:
 
     ruta_archivo = 'peliculas.txt'
@@ -12,3 +14,8 @@ class CatalogoPeliculas:
         with open(cls.ruta_archivo, 'r', encoding='utf8') as archivo:
             print('Catálogo de Peliculas'.center(50,'-'))
             print(archivo.read())
+
+    @classmethod
+    def eliminar_peliculas(cls):
+        os.remove(cls.ruta_archivo)
+        print(f'Archivo eliminado: {cls.ruta_archivo}')
