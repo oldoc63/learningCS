@@ -14,15 +14,18 @@ except:
 
 print(conexion)
 
-cursor = conexion.cursor()
-
 try:
-    sentencia = '''
-    INSERT INTO weather (date, city, temp_hi, temp_lo)
-    VALUES ('1994-11-29', 'Hayward', 54, 37);
-    '''
-    cursor.execute(sentencia)
-    conexion.commit()
-    print('table modified')
-except:
-    print('failed to modify table')
+    with conexion:
+        with conexion.cursor() as cursor:
+            sentencia = '''
+            INSERT INTO weather (date, city, temp_hi, temp_lo)
+            VALUES ('1994-11-29', 'Hayward', 54, 37);
+            '''
+            cursor.execute(sentencia)
+            # conexion.commit()
+            registros_insertados = cursor.rowcount
+            print(f'Registros Insertados: {registros_insertados}')
+except Exception as e:
+    print(f'Ocurrió un error: {e}')
+finally:
+    conexion.close()
