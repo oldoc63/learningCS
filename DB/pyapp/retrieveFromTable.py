@@ -18,7 +18,8 @@ cursor = conexion.cursor()
 
 try:
     sentencia = '''
-   SELECT city, (temp_hi+temp_lo)/2 AS temp_avg, date FROM weather;
+   SELECT * FROM weather
+    WHERE city = 'San Francisco' AND prcp > 0.0;
     '''
     cursor.execute(sentencia)
     print('data retrieved')
