@@ -14,21 +14,14 @@ except:
 
 print(conexion)
 
-cursor = conexion.cursor()
-
 try:
-    sentencia = '''
-   SELECT DISTINCT city
-    FROM weather
-    ORDER BY city;
-    '''
-    cursor.execute(sentencia)
-    print('data retrieved')
-except:
-    print('failed to retrieve data')
-
-registros = cursor.fetchall()
-print(registros)
-
-cursor.close()
-conexion.close()
+    with conexion:
+        with conexion.cursor() as cursor:
+            sentencia = 'SELECT * FROM weather;'
+            cursor.execute(sentencia)
+            registros = cursor.fetchall()
+            print(registros)
+except Exception as e:
+    print(f'Ocurrió un error: {e}')
+finally:
+    conexion.close()
