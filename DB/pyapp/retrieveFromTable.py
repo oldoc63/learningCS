@@ -19,7 +19,7 @@ cursor = conexion.cursor()
 try:
     sentencia = '''
    SELECT * FROM weather
-    ORDER BY city;
+    ORDER BY city, temp_lo;
     '''
     cursor.execute(sentencia)
     print('data retrieved')
