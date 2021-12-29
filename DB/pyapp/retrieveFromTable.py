@@ -18,7 +18,7 @@ cursor = conexion.cursor()
 
 try:
     sentencia = '''
-   SELECT * FROM weather;
+   SELECT city, temp_lo, temp_hi, prcp, date FROM weather;
     '''
     cursor.execute(sentencia)
     print('data retrieved')
