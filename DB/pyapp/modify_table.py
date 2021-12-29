@@ -18,8 +18,8 @@ cursor = conexion.cursor()
 
 try:
     sentencia = '''
-    INSERT INTO weather (city, temp_lo, temp_hi, prcp, date)
-    VALUES ('San Francisco', 43, 57, 0.0, '1994-11-29');
+    INSERT INTO weather (date, city, temp_hi, temp_lo)
+    VALUES ('1994-11-29', 'Hayward', 54, 37);
     '''
     cursor.execute(sentencia)
     conexion.commit()
