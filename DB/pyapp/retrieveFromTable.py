@@ -18,9 +18,7 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            SELECT *
-            FROM weather w, cities c
-            WHERE w.city = c.name;
+            SELECT max(temp_lo) FROM weather;
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
