@@ -18,9 +18,9 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            SELECT *
-                FROM weather, cities
-                WHERE city = name;
+            SELECT city, temp_lo, temp_hi, prcp, date, location
+            FROM weather, cities
+            WHERE city = name;
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
