@@ -19,7 +19,7 @@ try:
         with conexion.cursor() as cursor:
             sentencia = '''
             SELECT *
-            FROM weather INNER JOIN cities ON (weather.city = cities.name);
+            FROM weather LEFT OUTER JOIN cities ON (weather.city = cities.name);
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
