@@ -18,10 +18,8 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            SELECT weather.city, weather.temp_lo, weather.temp_hi,
-       weather.prcp, weather.date, cities.location
-            FROM weather, cities
-            WHERE cities.name = weather.city;
+            SELECT *
+            FROM weather INNER JOIN cities ON (weather.city = cities.name);
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
