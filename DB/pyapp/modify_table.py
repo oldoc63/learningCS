@@ -18,8 +18,9 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            INSERT INTO weather (date, city, temp_hi, temp_lo)
-            VALUES ('1994-11-29', 'Hayward', 54, 37);
+            UPDATE weather
+            SET temp_hi = temp_hi - 2,  temp_lo = temp_lo - 2
+            gitWHERE date > '1994-11-28';
             '''
             cursor.execute(sentencia)
             # conexion.commit()
