@@ -23,8 +23,8 @@ try:
             '''
             cursor.execute(sentencia)
             # conexion.commit()
-            registros_insertados = cursor.rowcount
-            print(f'Registros Insertados: {registros_insertados}')
+            registros_modificados = cursor.rowcount
+            print(f'Registros Modificados: {registros_modificados}')
 except Exception as e:
     print(f'Ocurrió un error: {e}')
 finally:
