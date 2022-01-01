@@ -18,11 +18,7 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            SELECT city, max(temp_lo)
-            FROM weather
-            WHERE city LIKE 'S%'
-            GROUP BY city
-            HAVING max(temp_lo) < 47;
+            SELECT * FROM weather;
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
