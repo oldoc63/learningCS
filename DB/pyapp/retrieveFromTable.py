@@ -20,7 +20,8 @@ try:
             sentencia = '''
             SELECT city, max(temp_lo)
             FROM weather
-            GROUP BY city;
+            GROUP BY city
+            HAVING max(temp_lo) < 40;
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
