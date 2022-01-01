@@ -18,8 +18,9 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            SELECT city FROM weather
-            WHERE temp_lo = (SELECT max(temp_lo) FROM weather);
+            SELECT city, max(temp_lo)
+            FROM weather
+            GROUP BY city;
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()
