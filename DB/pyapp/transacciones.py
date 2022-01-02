@@ -23,6 +23,8 @@ try:
 
     sentencia = 'UPDATE persona SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
     valores = ('Juan Carlos', 'Juarez', 'jcjuarez@mail.com', 1)
+    cursor.execute(sentencia,valores)
+    
     conexion.commit()
     print('Termina la transaccion, se hizo commit')
 except Exception as e:
