@@ -18,10 +18,7 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            CREATE VIEW myview AS
-            SELECT name, temp_lo, temp_hi, prcp, date, location
-            FROM weather, cities
-            WHERE city = name;
+            INSERT INTO weather VALUES ('Berkeley', 45, 53, 0.0, '1994-11-28');
             '''
             cursor.execute(sentencia)
             # conexion.commit()
