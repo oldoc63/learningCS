@@ -19,8 +19,8 @@ cursor = conexion.cursor()
 try:
     sentencia = '''
     CREATE TABLE cities (
-    name            varchar(80),
-    location        point
+        name     varchar(80) primary key,
+        location point
 );
     '''
     cursor.execute(sentencia)
