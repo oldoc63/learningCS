@@ -18,7 +18,7 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            SELECT * FROM weather;
+            SELECT * FROM myview;
             '''
             cursor.execute(sentencia)
             registros = cursor.fetchall()

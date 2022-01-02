@@ -18,7 +18,10 @@ try:
     with conexion:
         with conexion.cursor() as cursor:
             sentencia = '''
-            DELETE FROM weather WHERE city = 'Hayward';
+            CREATE VIEW myview AS
+            SELECT name, temp_lo, temp_hi, prcp, date, location
+            FROM weather, cities
+            WHERE city = name;
             '''
             cursor.execute(sentencia)
             # conexion.commit()
