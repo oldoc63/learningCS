@@ -15,20 +15,19 @@ except:
 print(conexion)
 
 try:
-    conexion.autocommit = False
-    cursor = conexion.cursor()
-    sentencia = 'INSERT INTO persona(nombre, apellido, email) VALUES(%s, %s, %s)'
-    valores = ('Carlos', 'Lara','clara@mail.com')
-    cursor.execute(sentencia, valores)
+    with conexion:
+        with conexion.cursor() as cursor:
+            cursor = conexion.cursor()
+            sentencia = 'INSERT INTO persona(nombre, apellido, email) VALUES(%s, %s, %s)'
+            valores = ('Alex', 'Rojas','arojas@mail.com')
+            cursor.execute(sentencia, valores)
 
-    sentencia = 'UPDATE persona SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
-    valores = ('Juan Carlos', 'Juarez', 'jcjuarez@mail.com', 1)
-    cursor.execute(sentencia,valores)
-    
-    conexion.commit()
-    print('Termina la transaccion, se hizo commit')
+            sentencia = 'UPDATE persona SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
+            valores = ('Juan', 'Perez', 'jperez@mail.com', 1)
+            cursor.execute(sentencia,valores)  
 except Exception as e:
-    conexion.rollback()
     print(f'Ocurrió un error, se hizo rollback {e}')
 finally:
     conexion.close()
+
+print('Termina la transaccion, se hizo commit')
