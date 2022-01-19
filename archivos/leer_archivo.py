@@ -1,4 +1,5 @@
 archivo = open('prueba.txt', 'r', encoding='utf8')
+
 #print(archivo.read())
 #print(archivo.read(5))
 #print(archivo.read(3))
