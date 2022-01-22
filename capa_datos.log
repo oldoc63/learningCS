@@ -1,29 +1,5 @@
-06:21:35 PM: DEBUG [logger_base.py:12] Mensaje a nivel debug
-06:21:35 PM: INFO [logger_base.py:13] Mensaje a nivel info
-06:21:35 PM: WARNING [logger_base.py:14] Mensaje a nivel de warning
-06:21:35 PM: ERROR [logger_base.py:15] Mensaje a nivel de error
-06:21:35 PM: CRITICAL [logger_base.py:16] Mensaje a nivel critico
-06:31:29 PM: DEBUG [persona.py:50] 
-            Id Persona: 1, Nombre: Juan,
-            Apellido: Perez, Email: jperez@mail.com
+
         
-06:40:53 PM: DEBUG [persona.py:50] 
-            Id Persona: 1, Nombre: Juan,
-            Apellido: Perez, Email: jperez@mail.com
-        
-06:40:53 PM: DEBUG [persona.py:53] 
-            Id Persona: None, Nombre: Juan,
-            Apellido: Peres, Email: jperez@mail.com
-        
-06:45:03 PM: DEBUG [persona.py:50] 
-            Id Persona: 1, Nombre: Juan,
-            Apellido: Perez, Email: jperez@mail.com
-        
-06:45:03 PM: DEBUG [persona.py:53] 
-            Id Persona: None, Nombre: Juan,
-            Apellido: Perez, Email: jperez@mail.com
-        
-06:45:03 PM: DEBUG [persona.py:56] 
-            Id Persona: 1, Nombre: None,
-            Apellido: None, Email: None
-        
+09:07:50 PM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7fec4f8a4d50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+09:09:00 PM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7f8973991d50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+09:09:00 PM: DEBUG [conexion.py:36] Se abrió correctamente el cursor: <cursor object at 0x7f8973228e50; closed: 0>
