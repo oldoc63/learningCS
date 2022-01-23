@@ -1,35 +1,32 @@
-01:51:48 PM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7fe0745e8d50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-01:51:48 PM: DEBUG [conexion.py:36] Se abrió correctamente el cursor: <cursor object at 0x7fe073e83e50; closed: 0>
-01:51:48 PM: DEBUG [persona_dao.py:42] Persona actualizada: 
-            Id Persona: 1, Nombre: Leopoldo,
-            Apellido: Olmos, Email: lolmos@mail.com
+02:55:28 PM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7f2c602d6d50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+02:56:47 PM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7f41f8a30d50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+02:56:47 PM: DEBUG [conexion.py:36] Se abrió correctamente el cursor: <cursor object at 0x7f41f8840e50; closed: 0>
+02:56:47 PM: DEBUG [persona_dao.py:51] Objeto Eliminado: 
+            Id Persona: 5, Nombre: None,
+            Apellido: None, Email: None
         
-01:51:48 PM: DEBUG [persona_dao.py:54] Personas actualizadas: 1
-01:51:48 PM: DEBUG [persona_dao.py:59] 
+02:56:47 PM: DEBUG [persona_dao.py:69] Personas eliminadas: 1
+02:56:47 PM: DEBUG [persona_dao.py:74] 
             Id Persona: 1, Nombre: Leopoldo,
             Apellido: Olmos, Email: None
         
-01:51:48 PM: DEBUG [persona_dao.py:59] 
+02:56:47 PM: DEBUG [persona_dao.py:74] 
             Id Persona: 2, Nombre: Juan,
             Apellido: Perez, Email: None
         
-01:51:48 PM: DEBUG [persona_dao.py:59] 
+02:56:47 PM: DEBUG [persona_dao.py:74] 
             Id Persona: 3, Nombre: Karla,
             Apellido: Gomez, Email: None
         
-01:51:48 PM: DEBUG [persona_dao.py:59] 
+02:56:47 PM: DEBUG [persona_dao.py:74] 
             Id Persona: 4, Nombre: Carlos,
             Apellido: Lara, Email: None
         
-01:51:48 PM: DEBUG [persona_dao.py:59] 
-            Id Persona: 5, Nombre: Carlos,
-            Apellido: Lara, Email: None
-        
-01:51:48 PM: DEBUG [persona_dao.py:59] 
+02:56:47 PM: DEBUG [persona_dao.py:74] 
             Id Persona: 6, Nombre: Alex,
             Apellido: Rojas, Email: None
         
-01:51:48 PM: DEBUG [persona_dao.py:59] 
+02:56:47 PM: DEBUG [persona_dao.py:74] 
             Id Persona: 7, Nombre: Pedro,
             Apellido: Najera, Email: None
         
