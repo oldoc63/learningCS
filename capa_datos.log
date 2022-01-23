@@ -1,26 +1,37 @@
-11:09:33 AM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7f25c8c44d50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-11:09:33 AM: DEBUG [conexion.py:36] Se abrió correctamente el cursor: <cursor object at 0x7f25c8a6ce50; closed: 0>
-11:09:33 AM: DEBUG [persona_dao.py:29] 
+
+        
+11:44:16 AM: DEBUG [conexion.py:23] Conexión exitosa: <connection object at 0x7f60da57ed50; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+11:44:16 AM: DEBUG [persona_dao.py:32] Persona insertada: 
+            Id Persona: None, Nombre: Pedro,
+            Apellido: Najera, Email: pnajera@mail.com
+        
+11:44:16 AM: DEBUG [persona_dao.py:39] Personas Insertadas: 1
+11:44:16 AM: DEBUG [conexion.py:36] Se abrió correctamente el cursor: <cursor object at 0x7f60d9e19e50; closed: 0>
+11:44:16 AM: DEBUG [persona_dao.py:44] 
             Id Persona: 1, Nombre: Juan,
             Apellido: Perez, Email: None
         
-11:09:33 AM: DEBUG [persona_dao.py:29] 
+11:44:16 AM: DEBUG [persona_dao.py:44] 
             Id Persona: 2, Nombre: Juan,
             Apellido: Perez, Email: None
         
-11:09:33 AM: DEBUG [persona_dao.py:29] 
+11:44:16 AM: DEBUG [persona_dao.py:44] 
             Id Persona: 3, Nombre: Karla,
             Apellido: Gomez, Email: None
         
-11:09:33 AM: DEBUG [persona_dao.py:29] 
+11:44:16 AM: DEBUG [persona_dao.py:44] 
             Id Persona: 4, Nombre: Carlos,
             Apellido: Lara, Email: None
         
-11:09:33 AM: DEBUG [persona_dao.py:29] 
+11:44:16 AM: DEBUG [persona_dao.py:44] 
             Id Persona: 5, Nombre: Carlos,
             Apellido: Lara, Email: None
         
-11:09:33 AM: DEBUG [persona_dao.py:29] 
+11:44:16 AM: DEBUG [persona_dao.py:44] 
             Id Persona: 6, Nombre: Alex,
             Apellido: Rojas, Email: None
+        
+11:44:16 AM: DEBUG [persona_dao.py:44] 
+            Id Persona: 7, Nombre: Pedro,
+            Apellido: Najera, Email: None
         
