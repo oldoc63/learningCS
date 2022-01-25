@@ -37,6 +37,11 @@ class Conexion:
         log.debug(f'Conexion obtenida del pool: {conexion}')
         return conexion
 
+    @classmethod
+    def liberarConexion(cls, conexion):
+        cls.obtenerPoll().putconn(conexion)
+        log.debug(f'Regresamos la conexion al pool: {conexion}')
+
 
 if __name__ == '__main__':
     conexion1 = Conexion.obtenerConexion()
