@@ -33,9 +33,11 @@ class Conexion:
 
     @classmethod
     def obtenerConexion(cls):
-        pass
-    
-    
+        conexion = cls.obtenerPoll().getconn()
+        log.debug(f'Conexion obtenida del pool: {conexion}')
+        return conexion
+
 
 if __name__ == '__main__':
-    pass
+    conexion1 = Conexion.obtenerConexion()
+    conexion2 = Conexion.obtenerConexion()
