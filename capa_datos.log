@@ -30,3 +30,6 @@
             Id Persona: 7, Nombre: Pedro,
             Apellido: Najera, Email: None
         
+06:27:08 PM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x7fdb0c859fa0>
+06:27:08 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7fdb0c031760; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+06:27:08 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7fdb0bf87040; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
