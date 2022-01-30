@@ -1,10 +1,11 @@
-07:22:46 PM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x7f1146024f10>
-07:22:46 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f114586baf0; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:43] Regresamos la conexion al pool: <connection object at 0x7f114586baf0; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f114586baf0; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f11456db3d0; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:43] Regresamos la conexion al pool: <connection object at 0x7f11456db3d0; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f11456db3d0; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f11456db500; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:43] Regresamos la conexion al pool: <connection object at 0x7f11456db500; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
-07:22:46 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f11456db500; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+01:50:58 PM: DEBUG [cursor_del_pool.py:10] Inicio del metodo with __enter__
+01:50:58 PM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x7fde27b47f70>
+01:50:58 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7fde27393c20; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+01:52:11 PM: DEBUG [cursor_del_pool.py:10] Inicio del metodo with __enter__
+01:52:11 PM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x7f05760e6f70>
+01:52:11 PM: DEBUG [conexion.py:37] Conexion obtenida del pool: <connection object at 0x7f0575932c20; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
+01:52:11 PM: DEBUG [cursor_del_pool.py:28] Dentro del bloque with
+01:52:11 PM: DEBUG [cursor_del_pool.py:30] [(2, 'Juan', 'Perez', 'jperez@mail.com'), (3, 'Karla', 'Gomez', 'kgomez@mail.com'), (4, 'Carlos', 'Lara', 'clara@mail.com'), (6, 'Alex', 'Rojas', 'arojas@mail.com'), (7, 'Pedro', 'Najera', 'pnajera@mail.com'), (1, 'Leopoldo', 'Olmos', 'lolmos@mail.com')]
+01:52:11 PM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+01:52:11 PM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+01:52:11 PM: DEBUG [conexion.py:43] Regresamos la conexion al pool: <connection object at 0x7f0575932c20; dsn: 'user=oldoc password=xxx dbname=pyapp host=127.0.0.1 port=5432', closed: 0>
