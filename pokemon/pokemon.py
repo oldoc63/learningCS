@@ -15,6 +15,12 @@ class Pokemon:
         if self.health == 0:
             self.health = 1
         print(f'{self.name} was revived!')
+    
+    def knock_out(self):
+        self.is_knocked_out = True
+        if self.health != 0:
+            self.health = 0
+        print(f'{self.name} was knocked out!')
 
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
 a = Pokemon("Charmander", "Fire", 7)
@@ -28,4 +34,6 @@ print(a.health)
 a.health = 0
 print(a.health)
 a.revive()
+print(a.health)
+a.knock_out()
 print(a.health)
