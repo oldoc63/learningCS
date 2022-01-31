@@ -7,3 +7,15 @@ class Pokemon:
         self.type = type
         self.is_knocked_out = False
 
+    def __repr__(self):
+        return f'This level {self.level} name {self.name} has {self.health} hit points remaining. They are a {self.type} type Pokemon'
+
+# Six pokemon are made with different levels. (If no level is given, it is level 5)
+a = Pokemon("Charmander", "Fire", 7)
+b = Pokemon("Squirtle", "Water")
+c = Pokemon("Lapras", "Water", 9)
+d = Pokemon("Bulbasaur", "Grass", 10)
+e = Pokemon("Vulpix", "Fire")
+f = Pokemon("Staryu", "Water", 4)
+
+print(a)
