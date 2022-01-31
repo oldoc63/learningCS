@@ -39,9 +39,10 @@ e = Pokemon("Vulpix", "Fire")
 f = Pokemon("Staryu", "Water", 4)
 
 print(a.health)
-a.health = 0
-print(a.health)
-a.revive()
-print(a.health)
-a.knock_out()
+
+a.lose_health(10)
+a.lose_health(10)
+a.lose_health(10)
+a.lose_health(10)
+
 print(a.health)
