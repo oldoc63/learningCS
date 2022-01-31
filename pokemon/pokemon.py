@@ -22,6 +22,14 @@ class Pokemon:
             self.health = 0
         print(f'{self.name} was knocked out!')
 
+    def lose_health(self, amount):
+        self.health -= amount
+        if self.health <= 0:
+            self.health = 0
+            self.knock_out()
+        else:
+            print(f'{self.name} now has health {self.health}.')
+
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
 a = Pokemon("Charmander", "Fire", 7)
 b = Pokemon("Squirtle", "Water")
