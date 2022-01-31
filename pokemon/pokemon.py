@@ -30,6 +30,14 @@ class Pokemon:
         else:
             print(f'{self.name} now has health {self.health}.')
 
+    def gain_health(self, amount):
+        if self.health == 0:
+            self.revive()
+        self.health += amount
+        if self.health >= self.max_health:
+            self.health = self.max_health
+        print(f'{self.name} now has {self.health} health.')
+
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
 a = Pokemon("Charmander", "Fire", 7)
 b = Pokemon("Squirtle", "Water")
@@ -44,5 +52,7 @@ a.lose_health(10)
 a.lose_health(10)
 a.lose_health(10)
 a.lose_health(10)
+a.gain_health(1)
+a.gain_health(34)
 
 print(a.health)
