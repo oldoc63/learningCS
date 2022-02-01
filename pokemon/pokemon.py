@@ -37,6 +37,14 @@ class Pokemon:
         if self.health >= self.max_health:
             self.health = self.max_health
         print(f'{self.name} now has {self.health} health.')
+    
+    def attack(self, other_pokemon):
+        if self.is_knocked_out:
+            print(f"{self.name} cant't attack because it is knocked out")
+            return
+
+        
+
 
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
 a = Pokemon("Charmander", "Fire", 7)
