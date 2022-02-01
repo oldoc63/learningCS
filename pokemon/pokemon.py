@@ -157,3 +157,11 @@ print("Let's get ready to fight! Here are our two trainers")
 
 print(trainer_one)
 print(trainer_two)
+
+# Testing attacking, giving potions, and switching pokemon. This could be built out more to ask for input
+trainer_one.attack_other_trainer(trainer_two)
+trainer_two.attack_other_trainer(trainer_one)
+trainer_two.use_potion()
+trainer_one.attack_other_trainer(trainer_two)
+trainer_two.switch_active_pokemon(0)
+trainer_two.switch_active_pokemon(1)
