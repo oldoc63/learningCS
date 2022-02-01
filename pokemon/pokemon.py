@@ -86,18 +86,12 @@ class Trainer:
             self.pokemons[self.current_pokemon].gain_health(20)
             self.potions -= 1
         else:
-            print("You don't have any more potions")    
+            print("You don't have any more potions") 
 
-# Six pokemon are made with different levels. (If no level is given, it is level 5)
-a = Pokemon("Charmander", "Fire", 7)
-b = Pokemon("Squirtle", "Water")
-c = Pokemon("Lapras", "Water", 9)
-d = Pokemon("Bulbasaur", "Grass", 10)
-e = Pokemon("Vulpix", "Fire")
-f = Pokemon("Staryu", "Water", 4)
+    def attack_other_trainer(self, other_trainer):
+        my_pokemon = self.pokemons[self.current_pokemon]
+        their_pokemon = other_trainer.pokemons[other_trainer.current_pokemon]
+        my_pokemon.attack(their_pokemon)   
 
 
-trainer1 = Trainer([a,b,c], 2, 'Leo')
-print(trainer1)
-trainer1.switch_active_pokemon(1)
-trainer1.use_potion()
+
