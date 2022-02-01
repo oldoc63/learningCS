@@ -56,6 +56,13 @@ class Pokemon:
             print(f'{self.name} attacked {other_pokemon} for {self.level * 2} damage.')
             print("It's super effective")
             other_pokemon.lose_health(self.level * 2)
+
+class Trainer:
+    def __init__(self, pokemon_list, num_potions, name):
+        self.pokemons = pokemon_list
+        self.potions = num_potions
+        self.current_pokemon = 0
+        self.name = name
             
 
         
@@ -76,5 +83,7 @@ a.lose_health(10)
 a.lose_health(10)
 a.gain_health(1)
 a.gain_health(34)
+a.attack(d)
 
 print(a.health)
+print(d.health)
