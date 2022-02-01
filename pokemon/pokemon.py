@@ -70,6 +70,15 @@ class Trainer:
             print(pokemon)
         return f'The current active pokemon is {self.pokemons[self.current_pokemon]}'
             
+    def switch_active_pokemon(self, new_active):
+        if new_active < len(self.pokemons) and new_active >= 0:
+            if self.pokemons[new_active].is_knocked_out:
+                print(f"{self.pokemons[new_active]} and is knocked out. You can't make it your active pokemon")
+            elif new_active == self.current_pokemon:
+                print(f'{self.pokemons[new_active]} and is already your active pokemon')
+            else:
+                self.current_pokemon = new_active
+                print(f"Go {self.pokemons[self.current_pokemon]}, it's your turn!")
 
         
 
@@ -81,15 +90,7 @@ d = Pokemon("Bulbasaur", "Grass", 10)
 e = Pokemon("Vulpix", "Fire")
 f = Pokemon("Staryu", "Water", 4)
 
-print(a.health)
 
-a.lose_health(10)
-a.lose_health(10)
-a.lose_health(10)
-a.lose_health(10)
-a.gain_health(1)
-a.gain_health(34)
-a.attack(d)
-
-print(a.health)
-print(d.health)
+trainer1 = Trainer([a,b,c], 2, 'Leo')
+print(trainer1)
+trainer1.switch_active_pokemon(1)
