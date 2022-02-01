@@ -48,7 +48,11 @@ class Pokemon:
             print('Its not very effective')
             other_pokemon.lose_health(round(self.level * 0.5))
             
+        if (self.type == other_pokemon.type):
+            print(f'{self.name} attacked {other_pokemon} for {self.level} damage.')
+            other_pokemon.lose_health(self.level)
 
+        
 
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
 a = Pokemon("Charmander", "Fire", 7)
