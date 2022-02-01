@@ -91,7 +91,69 @@ class Trainer:
     def attack_other_trainer(self, other_trainer):
         my_pokemon = self.pokemons[self.current_pokemon]
         their_pokemon = other_trainer.pokemons[other_trainer.current_pokemon]
-        my_pokemon.attack(their_pokemon)   
+        my_pokemon.attack(their_pokemon) 
 
+# Six pokemon are made with different levels. (If no level is given, it is level 5)
+a = Pokemon("Charmander", "Fire", 7)
+b = Pokemon("Squirtle", "Water")
+c = Pokemon("Lapras", "Water", 9)
+d = Pokemon("Bulbasaur", "Grass", 10)
+e = Pokemon("Vulpix", "Fire")
+f = Pokemon("Staryu", "Water", 4)
 
+trainer_one_name = input('Welcome to the world of Pokemon. Please enter a name for player one and hit enter:\n ')
+trainer_two_name = input(f'Hi, {trainer_one_name} Welcome! Let find you an apponent. Enter the name for the second player:\n ')
 
+choice = input(f'Hi, {trainer_two_name}! Lets pick our pokemon! {trainer_one_name}, would you like a Level 7 Charmander, or a Level 7 Squirtle? {trainer_two_name} will get the other one. Type either "Charmander" or "Squirtle": \n')
+
+while choice != 'Charmander' and choice != 'Squirtle':
+    choice = input("Whoops, it looks like you didn't choose 'Charmander' or 'Squirtle'. Try selecting one again! \n")
+
+# Keeping track of which pokemon they chose
+trainer_one_pokemon = []
+trainer_two_pokemon = []
+
+if choice == 'Charmander':
+  trainer_one_pokemon.append(a)
+  trainer_two_pokemon.append(b)
+
+else:
+  trainer_one_pokemon.append(b)
+  trainer_two_pokemon.append(a)
+
+# Selecting the second pokemon
+choice = input(trainer_two_name + ", would you like a Level 9 Lapras, or a Level 10 Bulbasaur? " + trainer_one_name + " will get the other one. Type either 'Lapras' or 'Bulbasaur'. ")
+
+while choice != 'Lapras' and choice != 'Bulbasaur':
+  choice = input("Whoops, it looks like you didn't choose 'Lapras' or 'Bulbasaur'. Try selecting one again! ")
+
+if choice == 'Lapras':
+  trainer_one_pokemon.append(d)
+  trainer_two_pokemon.append(c)
+
+else:
+  trainer_one_pokemon.append(c)
+  trainer_two_pokemon.append(d)
+
+# Selecting the third pokemon
+choice = input(trainer_one_name + ", would you like a Level 5 Vulpix, or a Level 4 Staryu? " + trainer_two_name + " will get the other one. Type either 'Vulpix' or 'Staryu'. ")
+
+while choice != 'Vulpix' and choice != 'Staryu':
+  choice = input("Whoops, it looks like you didn't choose 'Vulpix' or 'Staryu'. Try selecting one again! ")
+
+if choice == 'Vulpix':
+  trainer_one_pokemon.append(e)
+  trainer_two_pokemon.append(f)
+
+else:
+  trainer_one_pokemon.append(f)
+  trainer_two_pokemon.append(e)
+
+# Creating the Trainer objects with the given names and pokemon lists
+trainer_one = Trainer(trainer_one_pokemon, 3, trainer_one_name)
+trainer_two = Trainer(trainer_two_pokemon, 3, trainer_two_name)
+
+print("Let's get ready to fight! Here are our two trainers")
+
+print(trainer_one)
+print(trainer_two)
