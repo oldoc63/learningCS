@@ -43,7 +43,11 @@ class Pokemon:
             print(f"{self.name} cant't attack because it is knocked out")
             return
 
-        
+        if (self.type == "Fire" and other_pokemon.type == "Water") or (self.type == "Water" and other_pokemon.type == "Grass") or (self.type == "Grass" and other_pokemon.type == "Fire"):
+            print(f'{self.name} attacked {other_pokemon} for {round(self.level * 0.5)} damage.')
+            print('Its not very effective')
+            other_pokemon.lose_health(round(self.level * 0.5))
+            
 
 
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
