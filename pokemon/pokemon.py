@@ -63,6 +63,12 @@ class Trainer:
         self.potions = num_potions
         self.current_pokemon = 0
         self.name = name
+
+    def __repr__(self):
+        print(f'The trainer {self.name} has the following pokemon')
+        for pokemon in self.pokemons:
+            print(pokemon)
+        return f'The current active pokemon is {self.pokemons[self.current_pokemon]}'
             
 
         
