@@ -44,16 +44,16 @@ class Pokemon:
             return
 
         if (self.type == "Fire" and other_pokemon.type == "Water") or (self.type == "Water" and other_pokemon.type == "Grass") or (self.type == "Grass" and other_pokemon.type == "Fire"):
-            print(f'{self.name} attacked {other_pokemon} for {round(self.level * 0.5)} damage.')
+            print(f'{self.name} attacked {other_pokemon.name} for {round(self.level * 0.5)} damage.')
             print('Its not very effective')
             other_pokemon.lose_health(round(self.level * 0.5))
             
         if (self.type == other_pokemon.type):
-            print(f'{self.name} attacked {other_pokemon} for {self.level} damage.')
+            print(f'{self.name} attacked {other_pokemon.name} for {self.level} damage.')
             other_pokemon.lose_health(self.level)
 
         if (self.type == "Fire" and other_pokemon.type == "Grass") or (self.type == "Water" and other_pokemon.type == "Fire") or (self.type == "Grass" and other_pokemon.type == "Water"):
-            print(f'{self.name} attacked {other_pokemon} for {self.level * 2} damage.')
+            print(f'{self.name} attacked {other_pokemon.name} for {self.level * 2} damage.')
             print("It's super effective")
             other_pokemon.lose_health(self.level * 2)
 
@@ -68,19 +68,25 @@ class Trainer:
         print(f'The trainer {self.name} has the following pokemon')
         for pokemon in self.pokemons:
             print(pokemon)
-        return f'The current active pokemon is {self.pokemons[self.current_pokemon]}'
+        return f'The current active pokemon is {self.pokemons[self.current_pokemon].name}'
             
     def switch_active_pokemon(self, new_active):
         if new_active < len(self.pokemons) and new_active >= 0:
             if self.pokemons[new_active].is_knocked_out:
-                print(f"{self.pokemons[new_active]} and is knocked out. You can't make it your active pokemon")
+                print(f"{self.pokemons[new_active].name} and is knocked out. You can't make it your active pokemon")
             elif new_active == self.current_pokemon:
-                print(f'{self.pokemons[new_active]} and is already your active pokemon')
+                print(f'{self.pokemons[new_active].name} and is already your active pokemon')
             else:
                 self.current_pokemon = new_active
-                print(f"Go {self.pokemons[self.current_pokemon]}, it's your turn!")
+                print(f"Go {self.pokemons[self.current_pokemon].name}, it's your turn!")
 
-        
+    def use_potion(self):
+        if self.potions > 0:
+            print(f'You used a potion on {self.pokemons[self.current_pokemon].name}')
+            self.pokemons[self.current_pokemon].gain_health(20)
+            self.potions -= 1
+        else:
+            print("You don't have any more potions")    
 
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
 a = Pokemon("Charmander", "Fire", 7)
@@ -94,3 +100,4 @@ f = Pokemon("Staryu", "Water", 4)
 trainer1 = Trainer([a,b,c], 2, 'Leo')
 print(trainer1)
 trainer1.switch_active_pokemon(1)
+trainer1.use_potion()
