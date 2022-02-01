@@ -52,6 +52,12 @@ class Pokemon:
             print(f'{self.name} attacked {other_pokemon} for {self.level} damage.')
             other_pokemon.lose_health(self.level)
 
+        if (self.type == "Fire" and other_pokemon.type == "Grass") or (self.type == "Water" and other_pokemon.type == "Fire") or (self.type == "Grass" and other_pokemon.type == "Water"):
+            print(f'{self.name} attacked {other_pokemon} for {self.level * 2} damage.')
+            print("It's super effective")
+            other_pokemon.lose_health(self.level * 2)
+            
+
         
 
 # Six pokemon are made with different levels. (If no level is given, it is level 5)
