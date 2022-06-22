@@ -20,3 +20,11 @@ def operacion(a, b, sumar_arg):
     print(f'Resultado sumar: {sumar_arg(a, b)}')
 
 operacion(4, 5, sumar)
+
+# 3. Podemos retornar una funcion 
+def retornar_funcion():
+    return sumar
+
+mi_funcion_retornada = retornar_funcion()
+
+print(f'Resultado de funcion retornada: {mi_funcion_retornada(5, 7)}')
