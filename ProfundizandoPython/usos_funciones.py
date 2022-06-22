@@ -14,3 +14,9 @@ print(type(my_funcion))
 # Llamamos la funcion a traves de la variable
 resultado = my_funcion(5, 8)
 print(f'Resultado: {resultado}')
+
+# 2. Función como argumento
+def operacion(a, b, sumar_arg):
+    print(f'Resultado sumar: {sumar_arg(a, b)}')
+
+operacion(4, 5, sumar)
