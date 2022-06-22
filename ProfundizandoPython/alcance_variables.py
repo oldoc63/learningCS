@@ -3,7 +3,8 @@
 var_global = 'Variable Global'
 
 def imprimir():
-    #Acceder a una variable global
+    #Acceder a una Variable Global para modificación
+    global var_global
     print(f'Variable Global desde función: {var_global}')
     #Definir variable local
     var_local = 'variable local'
@@ -14,6 +15,7 @@ def imprimir():
         print(f'variable local dentro de función anidada: {var_local}')
     #Debemos llamar a la función anidada para que se ejecute
     funcion_anidada()
+    var_global = 'Nuevo valor variable global'
 
 
 imprimir()
